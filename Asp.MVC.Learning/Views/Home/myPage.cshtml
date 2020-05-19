@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model FastenalBranch;
+
+@{
+
+}
+
+    <h2>this is a new page</h2>
+
+    <p>hello my world</p>
+    <div>
+        this is the information from viewbag @ViewBag.SystemPath;
+    </div>
+
+    <form asp-action="AddBranch" method="post">
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Branch Code</span>
+            </div>
+            <input type="text" class="form-control"
+                   asp-for="BranchCode"
+                   placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Branch Name</span>
+            </div>
+            <input type="text" class="form-control"
+
+                   placeholder="Username" aria-label="Username" 
+                   asp-for="BranchName" 
+                   aria-describedby="basic-addon1">
+        </div>
+        <button type="submit">add new branche</button>
+    </form>
+
+
+
+
+<div class="btn text-center">your Ip Address is @ViewBag.UserIpAddress</div>
+
+<p class="btn text-center" >the port is @ViewBag.UserPort</p>
+    <div>
+        
+
+        this is the httpcontext contents ;
+    </div>
+    <button class="btn-light alert-danger">this is a button</button>
+    <div class="text-center">
+
+        <a class="btn btn-primary" asp-controller="Home" asp-action="MyTest" >to my test page</a>
+        <a class="btn btn-primary" asp-controller="Home" asp-action="ViewReport">View Report</a>
+    </div>
+

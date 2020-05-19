@@ -1,0 +1,22 @@
+﻿@model Asp.MVC.Learning.Models.Test
+
+    <head>
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    </head>
+
+    <form method="post" asp-action="myTest">
+
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label class="border-light">Name</label>
+            <input asp-for="Name" />
+        </p>
+
+
+        <p>
+            <label class="border-light">content of the test instance</label>
+            <input asp-for="Content"/>
+        </p>
+
+        <button class="btn-danger" type="submit"> submit</button>
+    </form>

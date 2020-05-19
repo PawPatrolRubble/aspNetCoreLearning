@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model OneApproval
+
+@if (ViewBag.Approvals!=null && (ViewBag.Approvals as List<OneApproval>).Count > 0)
+{
+    
+        @foreach (var item in ViewBag.Approvals as List<OneApproval>)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">fastenal part number</th>
+                        <th scope="col">fastenal description</th>
+                        <th scope="col">fastenal part number</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var code in item.dohItems)
+                    {
+                        <tr>
+                            <td>@code.fastenalCode</td>
+                            <td>@code.fastenalDescription</td>
+                            <td>@code.OrderQty</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+        }
+}
+        

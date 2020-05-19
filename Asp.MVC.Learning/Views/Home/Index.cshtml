@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["message"] = "hello world";
+    string myString = "this the mestring";
+
+     object clickMe()
+    {
+        myString = $"click at {DateTime.Now}";
+        return myString;
+    }
+
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>@myString</p>
+        <button onclick="@clickMe()"></button>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+
+@{ 
+}
